@@ -6,8 +6,9 @@
   "repository": "git@github.com:amypellegrini/piano-chord-charts.git",
   "author": "Amy Pellegrini <amyvpellegrini@gmail.com>",
   "license": "MIT",
+  "bin": "dist/cli.js",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && chmod u+x ./dist/cli.js",
     "semantic-release": "semantic-release",
     "test": "jest"
   },
