@@ -1,7 +1,5 @@
-const template = `
-  <?xml version="1.0" standalone="no"?>
-  <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
-    "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+const template = `<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
   <svg width="322" height="120" viewBox="46 0 322 120" version="1.1" xmlns="http://www.w3.org/2000/svg">
     <rect style="fill:#fafafa;stroke:black" x="0" y="0" width="23" height="120" ry="3" id="A0"></rect>
     <rect style="fill:#fafafa;stroke:black" x="23" y="0" width="23" height="120" ry="3"></rect>
