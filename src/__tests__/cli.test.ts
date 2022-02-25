@@ -1,6 +1,6 @@
 import { existsSync, unlinkSync } from "fs";
 import path from "path";
-import cmd from "../../library/cmd";
+import cmd from "./cmd";
 
 function cleanup() {
   const outputPath = path.join(__dirname, "../../keyboard.svg");
