@@ -1,22 +1,35 @@
-import { existsSync, unlinkSync } from "fs";
+import { existsSync, unlinkSync, rmdirSync } from "fs";
 import path from "path";
 import cmd from "./cmd";
 
-function cleanup() {
-  const outputPath = path.join(__dirname, "../../keyboard.svg");
-  unlinkSync(outputPath);
+const cliPath = path.join(__dirname, "../../dist/cli.js");
+const cli = cmd.create(cliPath);
+
+function cleanup(fullPath: string) {
+  unlinkSync(fullPath);
 }
 
 describe("CLI", () => {
-  afterEach(cleanup);
+  const filename = "keyboard.svg";
 
-  it("should create a default piano chart", async () => {
-    const cliPath = path.join(__dirname, "../../dist/cli.js");
-    const outputPath = path.join(__dirname, "../../keyboard.svg");
-    const cli = cmd.create(cliPath);
+  it("creates a default piano chart when no args are given", async () => {
+    const fullPath = path.join(filename);
 
     await cli.execute();
 
-    expect(existsSync(outputPath)).toBe(true);
+    expect(existsSync(fullPath)).toBe(true);
+    cleanup(fullPath);
+  });
+
+  it("emits the chart to a custom destination path", async () => {
+    const outDir = "test";
+    const fullPath = path.join(outDir, filename);
+
+    await cli.execute(["--outDir", "test"]);
+
+    expect(existsSync(fullPath)).toBe(true);
+
+    cleanup(fullPath);
+    rmdirSync(outDir);
   });
 });
