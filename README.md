@@ -20,10 +20,10 @@ The goal of this tool is to automate the process of generating piano/keyboard ch
 
 ## CLI
 
-Once installed, running the `piano-chord-charts` command will emit an empty keybaord chart
+Once installed, running the `piano-chord-charts` command will emit an empty keybaord chart. If additional options are passed the keyboard diagram will be created accordingly.
 
 ## CLI Options
 
-| Command    | Description                                         |
-| ---------- | --------------------------------------------------- |
-| `--outDir` | The file will be emitted to the specified location. |
+| Flag       | Description                                         | Example                                |
+| ---------- | --------------------------------------------------- | -------------------------------------- |
+| `--outDir` | The file will be emitted to the specified location. | `piano-chord-charts --outDir myfolder` |
