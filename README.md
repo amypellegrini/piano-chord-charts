@@ -14,7 +14,7 @@ piano-chord-charts -c Cmaj7 -v drop-2
 
 ## Problem statement
 
-Creating piano/keyboard chart diagrams for educational purposes can be a time consuming task, particularly when accounting for all musical keys in combination with different voicing patterns. When done manually it can be also repetitive and prone to errors.
+Creating piano/keyboard chart diagrams for educational purposes can be time consuming, particularly when accounting for all musical keys in combination with different voicing patterns. When done manually it can be repetitive and prone to errors.
 
 The goal of this tool is to automate the process of generating piano/keyboard charts in SVG format and provide a sensible interpretation of common chord symbols and voicing patterns.
 
