@@ -8,11 +8,9 @@ import path from "path";
 const program = new Command();
 
 program.option("--outDir <dir>");
-
 program.parse();
 
 const options = program.opts();
-
 const outDir = options.outDir || "";
 const outPath = path.join(outDir);
 
