@@ -13,7 +13,6 @@ program.parse();
 
 const options = program.opts();
 
-// @ts-ignore
 const outDir = options.outDir || "";
 const outPath = path.join(outDir);
 
