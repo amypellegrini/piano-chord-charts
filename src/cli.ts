@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import { Command } from "commander";
-import template from "./svg-template";
+import template from "./template";
 import * as fs from "fs";
 import path from "path";
 
