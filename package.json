@@ -1,6 +1,6 @@
 {
   "name": "piano-chord-charts",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "description": "Piano chord charts SVG library and generator tool.",
   "main": "dist/cli.js",
   "repository": "git@github.com:amypellegrini/piano-chord-charts.git",
