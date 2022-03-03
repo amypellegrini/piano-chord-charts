@@ -7,8 +7,13 @@ describe("default chart template", () => {
 });
 
 describe("render", () => {
-  it("should render default chart when no args are given", () => {
+  it("renders a default chart when no args are given", () => {
     const result = render();
+    expect(result).toMatchSnapshot();
+  });
+
+  it("renders gvien content inside the template", () => {
+    const result = render("text content");
     expect(result).toMatchSnapshot();
   });
 });
