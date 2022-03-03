@@ -28,7 +28,7 @@ exports[`default chart template renders correctly 1`] = `
 <rect style=\\"fill:black;stroke:black\\" x=\\"243.25\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
 <rect style=\\"fill:black;stroke:black\\" x=\\"269.25\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
 <rect style=\\"fill:black;stroke:black\\" x=\\"295.75\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
-<rect y=\\"-1\\" width=\\"322\\" height=\\"3\\"></rect>
+<rect y=\\"0\\" width=\\"322\\" height=\\"3\\"></rect>
   </svg>"
 `;
 
@@ -60,7 +60,7 @@ exports[`render renders a default chart when no args are given 1`] = `
 <rect style=\\"fill:black;stroke:black\\" x=\\"243.25\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
 <rect style=\\"fill:black;stroke:black\\" x=\\"269.25\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
 <rect style=\\"fill:black;stroke:black\\" x=\\"295.75\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
-<rect y=\\"-1\\" width=\\"322\\" height=\\"3\\"></rect>
+<rect y=\\"0\\" width=\\"322\\" height=\\"3\\"></rect>
   </svg>"
 `;
 
