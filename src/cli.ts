@@ -1,13 +1,15 @@
 #!/usr/bin/env node
 
 import { Command } from "commander";
-import template from "./template";
+import template, { render } from "./template";
 import * as fs from "fs";
 import path from "path";
 
 const program = new Command();
 
 program.option("--outDir <dir>");
+program.option("--format <format>");
+
 program.parse();
 
 const options = program.opts();
@@ -20,7 +22,15 @@ if (outDir && !fs.existsSync(outPath)) {
 
 const fullPath = path.join(outPath, "keyboard.svg");
 
-fs.writeFile(fullPath, template, "utf8", (err) => {
+let renderResult = template;
+
+if (options.format === "exact") {
+  renderResult = render({
+    format: options.format,
+  });
+}
+
+fs.writeFile(fullPath, renderResult, "utf8", (err) => {
   if (err) {
     throw err;
   }

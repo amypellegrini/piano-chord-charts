@@ -13,12 +13,10 @@ describe("CLI", () => {
   const filename = "keyboard.svg";
 
   it("creates a default piano chart when no args are given", async () => {
-    const fullPath = path.join(filename);
-
     await cli.execute();
 
-    expect(existsSync(fullPath)).toBe(true);
-    cleanup(fullPath);
+    expect(existsSync(filename)).toBe(true);
+    cleanup(filename);
   });
 
   it("emits the chart to a custom destination path", async () => {
@@ -31,5 +29,12 @@ describe("CLI", () => {
 
     cleanup(fullPath);
     rmdirSync(outDir);
+  });
+
+  it.each(["exact", "compact"])("supports %s format option", async (format) => {
+    await cli.execute(["--format", format]);
+
+    expect(existsSync(filename)).toBe(true);
+    cleanup(filename);
   });
 });
