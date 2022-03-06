@@ -3,6 +3,5 @@ logs
 npm-debug.log*
 dist
 node_modules/
-keyboard.svg
 .DS_Store
  
