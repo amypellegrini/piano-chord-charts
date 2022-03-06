@@ -24,6 +24,7 @@ Once installed, running the `piano-chord-charts` command will emit an empty keyb
 
 ## CLI Options
 
-| Flag       | Description                                         | Example                                |
-| ---------- | --------------------------------------------------- | -------------------------------------- |
-| `--outDir` | The file will be emitted to the specified location. | `piano-chord-charts --outDir myfolder` |
+| Flag       | Description                                                                              | Example                                |
+| ---------- | ---------------------------------------------------------------------------------------- | -------------------------------------- |
+| `--outDir` | The file will be emitted to the specified location.                                      | `piano-chord-charts --outDir myfolder` |
+| `--format` | Keyboard diagram format. Values can be `exact` or `compact` (default will be `compact`). | `piano-chord-charts --format exact`    |
