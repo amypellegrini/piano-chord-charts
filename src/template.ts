@@ -1,21 +1,38 @@
 type KeyboardChartFormat = "compact" | "exact";
 
+export type WhiteKey = "C" | "D" | "E" | "F" | "G" | "A" | "B";
+
 type RenderOptions = {
   format?: KeyboardChartFormat;
-  highlightKeys?: string;
+  highlightKeys?: WhiteKey[];
 };
 
-function renderWhiteKeys(height: number) {
+function renderWhiteKeys(height: number, highlightKeys?: WhiteKey[]) {
   const amount = 14;
   const width = 23;
+  const keyNames = ["C", "D", "E", "F", "G", "A", "B"];
 
   let keyX = 0;
   let result = "";
+  let highlightIdx = 0;
 
   for (let count = 0; count < amount; count++) {
+    let colour = "#fafafa";
+
+    if (highlightKeys) {
+      if (
+        highlightIdx < highlightKeys.length &&
+        highlightKeys[highlightIdx] === keyNames[count]
+      ) {
+        colour = "#a0c6e8";
+        highlightIdx += 1;
+      }
+    }
+
     keyX = count * width;
+
     result = result.concat(
-      `<rect style="fill:#fafafa;stroke:black" x="${keyX}" y="0" width="23" height="${height}" ry="3"></rect>\n`
+      `<rect style="fill:${colour};stroke:black" x="${keyX}" y="0" width="23" height="${height}" ry="3"></rect>\n`
     );
   }
 
@@ -33,7 +50,7 @@ function render(options?: RenderOptions) {
     blackKeyHeight = 80;
   }
 
-  const defaultContent = `${renderWhiteKeys(height)}
+  const defaultContent = `${renderWhiteKeys(height, options?.highlightKeys)}
 <rect style="fill:black;stroke:black" x="14.33333" y="0" width="13" height="${blackKeyHeight}" ry="1"></rect>
 <rect style="fill:black;stroke:black" x="41.66666" y="0" width="13" height="${blackKeyHeight}" ry="1"></rect>
 <rect style="fill:black;stroke:black" x="82.25" y="0" width="13" height="${blackKeyHeight}" ry="1"></rect>
