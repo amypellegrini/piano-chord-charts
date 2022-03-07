@@ -6,20 +6,20 @@ type RenderOptions = {
 };
 
 function renderWhiteKeys(height: number) {
-  return `<rect style="fill:#fafafa;stroke:black" x="0" y="0" width="23" height="${height}" ry="3"></rect>
-<rect style="fill:#fafafa;stroke:black" x="23" y="0" width="23" height="${height}" ry="3"></rect>
-<rect style="fill:#fafafa;stroke:black" x="46" y="0" width="23" height="${height}" ry="3"></rect>
-<rect style="fill:#fafafa;stroke:black" x="69" y="0" width="23" height="${height}" ry="3"></rect>
-<rect style="fill:#fafafa;stroke:black" x="92" y="0" width="23" height="${height}" ry="3"></rect>
-<rect style="fill:#fafafa;stroke:black" x="115" y="0" width="23" height="${height}" ry="3"></rect>
-<rect style="fill:#fafafa;stroke:black" x="138" y="0" width="23" height="${height}" ry="3"></rect>
-<rect style="fill:#fafafa;stroke:black" x="161" y="0" width="23" height="${height}" ry="3"></rect>
-<rect style="fill:#fafafa;stroke:black" x="184" y="0" width="23" height="${height}" ry="3"></rect>
-<rect style="fill:#fafafa;stroke:black" x="207" y="0" width="23" height="${height}" ry="3"></rect>
-<rect style="fill:#fafafa;stroke:black" x="230" y="0" width="23" height="${height}" ry="3"></rect>
-<rect style="fill:#fafafa;stroke:black" x="253" y="0" width="23" height="${height}" ry="3"></rect>
-<rect style="fill:#fafafa;stroke:black" x="276" y="0" width="23" height="${height}" ry="3"></rect>
-<rect style="fill:#fafafa;stroke:black" x="299" y="0" width="23" height="${height}" ry="3"></rect>`;
+  const amount = 14;
+  const width = 23;
+
+  let keyX = 0;
+  let result = "";
+
+  for (let count = 0; count < amount; count++) {
+    keyX = count * width;
+    result = result.concat(
+      `<rect style="fill:#fafafa;stroke:black" x="${keyX}" y="0" width="23" height="${height}" ry="3"></rect>\n`
+    );
+  }
+
+  return result;
 }
 
 function render(options?: RenderOptions) {
