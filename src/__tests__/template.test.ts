@@ -1,8 +1,14 @@
-import template, { render } from "../template";
+import template, { render, renderWhiteKeys } from "../template";
 
 describe("default chart template", () => {
   it("renders correctly", () => {
     expect(template).toMatchSnapshot();
+  });
+});
+
+describe("renderWhiteKeys", () => {
+  it("renders white keys default SVG content with a given height", () => {
+    expect(renderWhiteKeys(120)).toMatchSnapshot();
   });
 });
 
