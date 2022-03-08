@@ -9,6 +9,7 @@ const program = new Command();
 
 program.option("--outDir <dir>");
 program.option("--format <format>");
+program.option("--highlightKeys <keys>");
 
 program.parse();
 
@@ -24,9 +25,10 @@ const fullPath = path.join(outPath, "keyboard.svg");
 
 let renderResult = template;
 
-if (options.format === "exact") {
+if (options && Object.keys(options).length > 0) {
   renderResult = render({
     format: options.format,
+    highlightKeys: options.highlightKeys?.split(" "),
   });
 }
 
