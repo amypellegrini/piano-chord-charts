@@ -19,7 +19,20 @@ describe("CLI", () => {
     cleanup(filename);
   });
 
-  it("emits the chart to a custom destination path", async () => {
+  it.each([
+    ".",
+    "./",
+    "../",
+    "../..",
+    "../../",
+    "",
+    "test",
+    "/test",
+    "/test/",
+    "nested/test",
+    "/nested/test",
+    "/nested/test/",
+  ])("emits the chart to a custom destination path: %s", async () => {
     const outDir = "test";
     const fullPath = path.join(outDir, filename);
 
