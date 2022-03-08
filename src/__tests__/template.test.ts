@@ -1,8 +1,19 @@
-import template, { render } from "../template";
+import template, { render, renderWhiteKeys, WhiteKey } from "../template";
 
 describe("default chart template", () => {
   it("renders correctly", () => {
     expect(template).toMatchSnapshot();
+  });
+});
+
+describe("renderWhiteKeys", () => {
+  it("renders white keys default SVG content with a given height", () => {
+    expect(renderWhiteKeys(120)).toMatchSnapshot();
+  });
+
+  it("highlights specific white keys from left to right", () => {
+    const highlightKeys: WhiteKey[] = ["C", "E", "G"];
+    expect(renderWhiteKeys(120, highlightKeys)).toMatchSnapshot();
   });
 });
 
@@ -26,5 +37,13 @@ describe("render", () => {
     expect(defaultRender).toEqual(withCompactOption);
     expect(defaultRender).not.toEqual(withExactOption);
     expect(withExactOption).toMatchSnapshot();
+  });
+
+  it("highlights specific white keys from left to right", () => {
+    const result = render({
+      highlightKeys: ["C", "E", "G"] as WhiteKey[],
+    });
+
+    expect(result).toMatchSnapshot();
   });
 });

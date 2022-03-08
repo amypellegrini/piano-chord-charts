@@ -37,4 +37,11 @@ describe("CLI", () => {
     expect(existsSync(filename)).toBe(true);
     cleanup(filename);
   });
+
+  it("higlights specific white keys (by name, left to right)", async () => {
+    await cli.execute(["--highlightKeys", "C E G"]);
+
+    expect(existsSync(filename)).toBe(true);
+    cleanup(filename);
+  });
 });
