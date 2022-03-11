@@ -178,7 +178,7 @@ exports[`renderWhiteKeys highlights specific white keys from left to right 1`] =
 <rect style=\\"fill:#a0c6e8;stroke:black\\" x=\\"92\\" y=\\"0\\" width=\\"23\\" height=\\"120\\" ry=\\"3\\"></rect>
 <rect style=\\"fill:#fafafa;stroke:black\\" x=\\"115\\" y=\\"0\\" width=\\"23\\" height=\\"120\\" ry=\\"3\\"></rect>
 <rect style=\\"fill:#fafafa;stroke:black\\" x=\\"138\\" y=\\"0\\" width=\\"23\\" height=\\"120\\" ry=\\"3\\"></rect>
-<rect style=\\"fill:#fafafa;stroke:black\\" x=\\"161\\" y=\\"0\\" width=\\"23\\" height=\\"120\\" ry=\\"3\\"></rect>
+<rect style=\\"fill:#a0c6e8;stroke:black\\" x=\\"161\\" y=\\"0\\" width=\\"23\\" height=\\"120\\" ry=\\"3\\"></rect>
 <rect style=\\"fill:#fafafa;stroke:black\\" x=\\"184\\" y=\\"0\\" width=\\"23\\" height=\\"120\\" ry=\\"3\\"></rect>
 <rect style=\\"fill:#fafafa;stroke:black\\" x=\\"207\\" y=\\"0\\" width=\\"23\\" height=\\"120\\" ry=\\"3\\"></rect>
 <rect style=\\"fill:#fafafa;stroke:black\\" x=\\"230\\" y=\\"0\\" width=\\"23\\" height=\\"120\\" ry=\\"3\\"></rect>

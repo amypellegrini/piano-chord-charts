@@ -35,12 +35,14 @@ function renderWhiteKeys(height: number, highlightKeys?: WhiteKey[]) {
   let highlightIdx = 0;
 
   for (let count = 0; count < amount; count++) {
+    const keyName = keyNames[count] || keyNames[count - 7];
+
     let colour = "#fafafa";
 
     if (highlightKeys) {
       if (
         highlightIdx < highlightKeys.length &&
-        highlightKeys[highlightIdx] === keyNames[count]
+        highlightKeys[highlightIdx] === keyName
       ) {
         colour = "#a0c6e8";
         highlightIdx += 1;

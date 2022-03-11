@@ -18,8 +18,9 @@ describe("renderWhiteKeys", () => {
   });
 
   it("highlights specific white keys from left to right", () => {
-    const highlightKeys: WhiteKey[] = ["C", "E", "G"];
-    expect(renderWhiteKeys(120, highlightKeys)).toMatchSnapshot();
+    const highlightKeys: WhiteKey[] = ["C", "E", "G", "C"];
+    const result = renderWhiteKeys(120, highlightKeys);
+    expect(result).toMatchSnapshot();
   });
 });
 
