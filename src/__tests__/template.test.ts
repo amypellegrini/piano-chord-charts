@@ -1,4 +1,9 @@
-import template, { render, renderWhiteKeys, WhiteKey } from "../template";
+import template, {
+  render,
+  renderWhiteKeys,
+  renderBlackKeys,
+  WhiteKey,
+} from "../template";
 
 describe("default chart template", () => {
   it("renders correctly", () => {
@@ -14,6 +19,12 @@ describe("renderWhiteKeys", () => {
   it("highlights specific white keys from left to right", () => {
     const highlightKeys: WhiteKey[] = ["C", "E", "G"];
     expect(renderWhiteKeys(120, highlightKeys)).toMatchSnapshot();
+  });
+});
+
+describe("renderBlackKeys", () => {
+  it("renders black keys default SVG content with a given height", () => {
+    expect(renderBlackKeys(80)).toMatchSnapshot();
   });
 });
 

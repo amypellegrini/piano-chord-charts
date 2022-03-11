@@ -39,6 +39,43 @@ function renderWhiteKeys(height: number, highlightKeys?: WhiteKey[]) {
   return result;
 }
 
+type OffsetKey = "C" | "D" | "F" | "G" | "A";
+
+type OffsetKeyMap = {
+  [key in OffsetKey]: number;
+};
+
+function renderBlackKeys(height: number) {
+  const keyNames = ["C", "D", "E", "F", "G", "A", "B"];
+  const whiteKeysAmount = 14;
+  const whiteKeyWidth = 23;
+
+  const offsetFromWhiteKeyMap: OffsetKeyMap = {
+    C: 14.33333,
+    D: 18.66666,
+    F: 13.25,
+    G: 16.25,
+    A: 19.75,
+  };
+
+  let result = "";
+
+  for (let count = 0; count < whiteKeysAmount; count++) {
+    const keyName = keyNames[count] || keyNames[count - 7];
+
+    if (keyName in offsetFromWhiteKeyMap) {
+      const offset = offsetFromWhiteKeyMap[keyName as OffsetKey];
+      const keyX = count * whiteKeyWidth + offset;
+
+      result = result.concat(
+        `<rect style="fill:black;stroke:black" x="${keyX}" y="0" width="13" height="${height}" ry="1"></rect>\n`
+      );
+    }
+  }
+
+  return result;
+}
+
 function render(options?: RenderOptions) {
   let height = 65;
   let blackKeyHeight = 40;
@@ -50,18 +87,12 @@ function render(options?: RenderOptions) {
     blackKeyHeight = 80;
   }
 
-  const defaultContent = `${renderWhiteKeys(height, options?.highlightKeys)}
-<rect style="fill:black;stroke:black" x="14.33333" y="0" width="13" height="${blackKeyHeight}" ry="1"></rect>
-<rect style="fill:black;stroke:black" x="41.66666" y="0" width="13" height="${blackKeyHeight}" ry="1"></rect>
-<rect style="fill:black;stroke:black" x="82.25" y="0" width="13" height="${blackKeyHeight}" ry="1"></rect>
-<rect style="fill:black;stroke:black" x="108.25" y="0" width="13" height="${blackKeyHeight}" ry="1"></rect>
-<rect style="fill:black;stroke:black" x="134.75" y="0" width="13" height="${blackKeyHeight}" ry="1"></rect>
-<rect style="fill:black;stroke:black" x="175.33333" y="0" width="13" height="${blackKeyHeight}" ry="1"></rect>
-<rect style="fill:black;stroke:black" x="202.66666" y="0" width="13" height="${blackKeyHeight}" ry="1"></rect>
-<rect style="fill:black;stroke:black" x="243.25" y="0" width="13" height="${blackKeyHeight}" ry="1"></rect>
-<rect style="fill:black;stroke:black" x="269.25" y="0" width="13" height="${blackKeyHeight}" ry="1"></rect>
-<rect style="fill:black;stroke:black" x="295.75" y="0" width="13" height="${blackKeyHeight}" ry="1"></rect>
-<rect y="0" width="322" height="3"></rect>`;
+  const defaultContent = `${renderWhiteKeys(
+    height,
+    options?.highlightKeys
+  )}${renderBlackKeys(
+    blackKeyHeight
+  )}<rect y="0" width="322" height="3"></rect>`;
 
   const template = `<?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
@@ -74,5 +105,5 @@ function render(options?: RenderOptions) {
 
 const template = render();
 
-export { render, renderWhiteKeys };
+export { render, renderWhiteKeys, renderBlackKeys };
 export default template;
