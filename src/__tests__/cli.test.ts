@@ -19,30 +19,19 @@ describe("CLI", () => {
     cleanup(filename);
   });
 
-  it.each([
-    ".",
-    "./",
-    "../",
-    "../..",
-    "../../",
-    "",
-    "test",
-    "/test",
-    "/test/",
-    "nested/test",
-    "/nested/test",
-    "/nested/test/",
-  ])("emits the chart to a custom destination path: %s", async () => {
-    const outDir = "test";
-    const fullPath = path.join(outDir, filename);
+  it.each(["test", "test/", "nested/test", "nested/test/"])(
+    "emits the chart to a custom destination path: %s",
+    async (outDir) => {
+      const fullPath = path.join(outDir, filename);
 
-    await cli.execute(["--outDir", "test"]);
+      await cli.execute(["--outDir", outDir]);
 
-    expect(existsSync(fullPath)).toBe(true);
+      expect(existsSync(fullPath)).toBe(true);
 
-    cleanup(fullPath);
-    rmdirSync(outDir);
-  });
+      cleanup(fullPath);
+      rmdirSync(outDir);
+    }
+  );
 
   it.each(["exact", "compact"])("supports %s format option", async (format) => {
     await cli.execute(["--format", format]);

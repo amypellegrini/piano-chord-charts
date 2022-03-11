@@ -18,7 +18,7 @@ const outDir = options.outDir || "";
 const outPath = path.join(outDir);
 
 if (outDir && !fs.existsSync(outPath)) {
-  fs.mkdirSync(outPath);
+  fs.mkdirSync(path.resolve(outPath), { recursive: true });
 }
 
 const fullPath = path.join(outPath, "keyboard.svg");
