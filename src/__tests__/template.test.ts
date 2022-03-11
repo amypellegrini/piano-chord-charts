@@ -65,7 +65,23 @@ describe("render", () => {
 
   it("highlights specific white keys from left to right", () => {
     const result = render({
-      highlightKeys: ["C", "E", "G"] as WhiteKey[],
+      highlightKeys: ["C", "E", "G"],
+    });
+
+    expect(result).toMatchSnapshot();
+  });
+
+  it("highlights specific black keys from left to right", () => {
+    const result = render({
+      highlightKeys: ["Db", "Eb", "G#"],
+    });
+
+    expect(result).toMatchSnapshot();
+  });
+
+  it("highlights a mix of different keys from left to right", () => {
+    const result = render({
+      highlightKeys: ["Db", "E", "G#", "B"],
     });
 
     expect(result).toMatchSnapshot();

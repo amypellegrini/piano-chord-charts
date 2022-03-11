@@ -127,7 +127,7 @@ function render(options?: RenderOptions) {
   });
 
   const highlightBlackKeys = options?.highlightKeys?.filter((key) => {
-    return !!key.match(/(A#|C#|D#|F#|G#)$/);
+    return !!key.match(/(A#|C#|D#|F#|G#|Db|Eb|Gb|Ab|Bb)$/);
   });
 
   const defaultContent = `${renderWhiteKeys(
