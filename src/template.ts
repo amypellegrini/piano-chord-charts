@@ -1,10 +1,21 @@
 type KeyboardChartFormat = "compact" | "exact";
 
 export type WhiteKey = "C" | "D" | "E" | "F" | "G" | "A" | "B";
+export type BlackKey =
+  | "C#"
+  | "D#"
+  | "F#"
+  | "G#"
+  | "A#"
+  | "Db"
+  | "Eb"
+  | "Gb"
+  | "Ab"
+  | "Bb";
 
 type RenderOptions = {
   format?: KeyboardChartFormat;
-  highlightKeys?: WhiteKey[];
+  highlightKeys?: Array<WhiteKey | BlackKey>;
 };
 
 function renderWhiteKeys(height: number, highlightKeys?: WhiteKey[]) {
@@ -45,7 +56,7 @@ type OffsetKeyMap = {
   [key in OffsetKey]: number;
 };
 
-function renderBlackKeys(height: number) {
+function renderBlackKeys(height: number, highlightKeys?: BlackKey[]) {
   const keyNames = ["C", "D", "E", "F", "G", "A", "B"];
   const whiteKeysAmount = 14;
   const whiteKeyWidth = 23;
@@ -59,16 +70,24 @@ function renderBlackKeys(height: number) {
   };
 
   let result = "";
+  let highlightIdx = 0;
 
   for (let count = 0; count < whiteKeysAmount; count++) {
     const keyName = keyNames[count] || keyNames[count - 7];
 
+    let colour = "black";
+
     if (keyName in offsetFromWhiteKeyMap) {
+      if (highlightKeys && keyName + "#" === highlightKeys[highlightIdx]) {
+        colour = "#a0c6e8";
+        highlightIdx++;
+      }
+
       const offset = offsetFromWhiteKeyMap[keyName as OffsetKey];
       const keyX = count * whiteKeyWidth + offset;
 
       result = result.concat(
-        `<rect style="fill:black;stroke:black" x="${keyX}" y="0" width="13" height="${height}" ry="1"></rect>\n`
+        `<rect style="fill:${colour};stroke:black" x="${keyX}" y="0" width="13" height="${height}" ry="1"></rect>\n`
       );
     }
   }
@@ -87,11 +106,20 @@ function render(options?: RenderOptions) {
     blackKeyHeight = 80;
   }
 
+  const highlightWhiteKeys = options?.highlightKeys?.filter((key) => {
+    return !!key.match(/(A|B|C|D|E|F|G)$/);
+  });
+
+  const highlightBlackKeys = options?.highlightKeys?.filter((key) => {
+    return !!key.match(/(A#|C#|D#|F#|G#)$/);
+  });
+
   const defaultContent = `${renderWhiteKeys(
     height,
-    options?.highlightKeys
+    highlightWhiteKeys as WhiteKey[]
   )}${renderBlackKeys(
-    blackKeyHeight
+    blackKeyHeight,
+    highlightBlackKeys as BlackKey[]
   )}<rect y="0" width="322" height="3"></rect>`;
 
   const template = `<?xml version="1.0" standalone="no"?>

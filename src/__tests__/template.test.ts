@@ -3,6 +3,7 @@ import template, {
   renderWhiteKeys,
   renderBlackKeys,
   WhiteKey,
+  BlackKey,
 } from "../template";
 
 describe("default chart template", () => {
@@ -25,6 +26,11 @@ describe("renderWhiteKeys", () => {
 describe("renderBlackKeys", () => {
   it("renders black keys default SVG content with a given height", () => {
     expect(renderBlackKeys(80)).toMatchSnapshot();
+  });
+
+  it("highlights sharp black keys from left to right", () => {
+    const highlightKeys: BlackKey[] = ["C#", "D#", "F#"];
+    expect(renderBlackKeys(120, highlightKeys)).toMatchSnapshot();
   });
 });
 
