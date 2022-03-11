@@ -30,7 +30,13 @@ describe("renderBlackKeys", () => {
 
   it("highlights sharp black keys from left to right", () => {
     const highlightKeys: BlackKey[] = ["C#", "D#", "F#"];
-    expect(renderBlackKeys(120, highlightKeys)).toMatchSnapshot();
+    expect(renderBlackKeys(80, highlightKeys)).toMatchSnapshot();
+  });
+
+  it("highlights flat black keys from left to right", () => {
+    const highlightKeys: BlackKey[] = ["Db", "Eb", "Gb"];
+    const result = renderBlackKeys(80, highlightKeys);
+    expect(result).toMatchSnapshot();
   });
 });
 

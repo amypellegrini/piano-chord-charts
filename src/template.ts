@@ -18,10 +18,17 @@ type RenderOptions = {
   highlightKeys?: Array<WhiteKey | BlackKey>;
 };
 
+type OffsetKey = "C" | "D" | "F" | "G" | "A";
+
+type OffsetKeyMap = {
+  [key in OffsetKey]: number;
+};
+
+const keyNames = ["C", "D", "E", "F", "G", "A", "B"];
+
 function renderWhiteKeys(height: number, highlightKeys?: WhiteKey[]) {
   const amount = 14;
   const width = 23;
-  const keyNames = ["C", "D", "E", "F", "G", "A", "B"];
 
   let keyX = 0;
   let result = "";
@@ -50,14 +57,7 @@ function renderWhiteKeys(height: number, highlightKeys?: WhiteKey[]) {
   return result;
 }
 
-type OffsetKey = "C" | "D" | "F" | "G" | "A";
-
-type OffsetKeyMap = {
-  [key in OffsetKey]: number;
-};
-
 function renderBlackKeys(height: number, highlightKeys?: BlackKey[]) {
-  const keyNames = ["C", "D", "E", "F", "G", "A", "B"];
   const whiteKeysAmount = 14;
   const whiteKeyWidth = 23;
 
@@ -69,16 +69,30 @@ function renderBlackKeys(height: number, highlightKeys?: BlackKey[]) {
     A: 19.75,
   };
 
+  const flatToSharpMap: { [key: string]: string } = {
+    Db: "C#",
+    Eb: "D#",
+    Gb: "F#",
+    Ab: "G#",
+    Bb: "A#",
+  };
+
   let result = "";
   let highlightIdx = 0;
 
   for (let count = 0; count < whiteKeysAmount; count++) {
     const keyName = keyNames[count] || keyNames[count - 7];
+    const blackKeyName = keyName + "#";
 
     let colour = "black";
+    let highlightKeyName = (highlightKeys && highlightKeys[highlightIdx]) || "";
+
+    if (highlightKeyName.match(/b/)) {
+      highlightKeyName = flatToSharpMap[highlightKeyName];
+    }
 
     if (keyName in offsetFromWhiteKeyMap) {
-      if (highlightKeys && keyName + "#" === highlightKeys[highlightIdx]) {
+      if (highlightKeys && blackKeyName === highlightKeyName) {
         colour = "#a0c6e8";
         highlightIdx++;
       }
