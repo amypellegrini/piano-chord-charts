@@ -86,7 +86,7 @@ function renderBlackKeys(height: number, highlightKeys?: BlackKey[]) {
     const keyName = keyNames[count] || keyNames[count - 7];
     const blackKeyName = keyName + "#";
 
-    let colour = "black";
+    let colour = "#222222";
     let highlightKeyName = (highlightKeys && highlightKeys[highlightIdx]) || "";
 
     if (highlightKeyName.match(/b/)) {
