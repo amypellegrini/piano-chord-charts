@@ -26,6 +26,7 @@ type OffsetKeyMap = {
 };
 
 const keyNames = ["C", "D", "E", "F", "G", "A", "B"];
+const whiteKeyWidth = 23;
 
 function renderWhiteKeys(
   height: number,
@@ -33,7 +34,6 @@ function renderWhiteKeys(
   size?: number
 ) {
   const amount = size || 14;
-  const width = 23;
 
   let keyX = 0;
   let result = "";
@@ -54,7 +54,7 @@ function renderWhiteKeys(
       }
     }
 
-    keyX = count * width;
+    keyX = count * whiteKeyWidth;
 
     result = result.concat(
       `<rect style="fill:${colour};stroke:black" x="${keyX}" y="0" width="23" height="${height}" ry="3"></rect>\n`
@@ -70,7 +70,6 @@ function renderBlackKeys(
   size?: number
 ) {
   const whiteKeysAmount = size || 14;
-  const whiteKeyWidth = 23;
 
   const offsetFromWhiteKeyMap: OffsetKeyMap = {
     C: 14.33333,
@@ -125,6 +124,8 @@ function render(options?: RenderOptions) {
   let blackKeyHeight = 40;
 
   const format: KeyboardChartFormat = options?.format || "compact";
+  const size: number = options?.size || 14;
+  const width: number = size * whiteKeyWidth;
 
   if (format === "exact") {
     height = 120;
@@ -142,16 +143,18 @@ function render(options?: RenderOptions) {
   const defaultContent = `${renderWhiteKeys(
     height,
     highlightWhiteKeys as WhiteKey[],
-    options?.size
+    size
   )}${renderBlackKeys(
     blackKeyHeight,
     highlightBlackKeys as BlackKey[],
-    options?.size
-  )}<rect y="0" width="322" height="3"></rect>`;
+    size
+  )}<rect y="-1" width="${width}" height="3"></rect>`;
 
   const template = `<?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-  <svg width="322" height="120" viewBox="0 0 322 120" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <svg width="${width + 1}" height="${
+    height + 1
+  }" viewBox="0 0 ${width} ${height}" version="1.1" xmlns="http://www.w3.org/2000/svg">
     ${defaultContent}
   </svg>`;
 
