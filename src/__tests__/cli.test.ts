@@ -46,4 +46,11 @@ describe("CLI", () => {
     expect(existsSync(filename)).toBe(true);
     cleanup(filename);
   });
+
+  it("accepts a custom file name", async () => {
+    await cli.execute(["--fileName", "customFileName.svg"]);
+
+    expect(existsSync("customFileName.svg")).toBe(true);
+    cleanup("customFileName.svg");
+  });
 });

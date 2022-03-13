@@ -10,6 +10,7 @@ const program = new Command();
 program.option("--outDir <dir>");
 program.option("--format <format>");
 program.option("--highlightKeys <keys>");
+program.option("--fileName <fileName>");
 
 program.parse();
 
@@ -21,7 +22,7 @@ if (outDir && !fs.existsSync(outPath)) {
   fs.mkdirSync(path.resolve(outPath), { recursive: true });
 }
 
-const fullPath = path.join(outPath, "keyboard.svg");
+const fullPath = path.join(outPath, options.fileName || "keyboard.svg");
 
 let renderResult = template;
 
