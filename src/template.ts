@@ -16,6 +16,7 @@ export type BlackKey =
 type RenderOptions = {
   format?: KeyboardChartFormat;
   highlightKeys?: Array<WhiteKey | BlackKey>;
+  size?: number;
 };
 
 type OffsetKey = "C" | "D" | "F" | "G" | "A";
@@ -26,8 +27,12 @@ type OffsetKeyMap = {
 
 const keyNames = ["C", "D", "E", "F", "G", "A", "B"];
 
-function renderWhiteKeys(height: number, highlightKeys?: WhiteKey[]) {
-  const amount = 14;
+function renderWhiteKeys(
+  height: number,
+  highlightKeys?: WhiteKey[],
+  size?: number
+) {
+  const amount = size || 14;
   const width = 23;
 
   let keyX = 0;
@@ -59,8 +64,12 @@ function renderWhiteKeys(height: number, highlightKeys?: WhiteKey[]) {
   return result;
 }
 
-function renderBlackKeys(height: number, highlightKeys?: BlackKey[]) {
-  const whiteKeysAmount = 14;
+function renderBlackKeys(
+  height: number,
+  highlightKeys?: BlackKey[],
+  size?: number
+) {
+  const whiteKeysAmount = size || 14;
   const whiteKeyWidth = 23;
 
   const offsetFromWhiteKeyMap: OffsetKeyMap = {
@@ -132,10 +141,12 @@ function render(options?: RenderOptions) {
 
   const defaultContent = `${renderWhiteKeys(
     height,
-    highlightWhiteKeys as WhiteKey[]
+    highlightWhiteKeys as WhiteKey[],
+    options?.size
   )}${renderBlackKeys(
     blackKeyHeight,
-    highlightBlackKeys as BlackKey[]
+    highlightBlackKeys as BlackKey[],
+    options?.size
   )}<rect y="0" width="322" height="3"></rect>`;
 
   const template = `<?xml version="1.0" standalone="no"?>
