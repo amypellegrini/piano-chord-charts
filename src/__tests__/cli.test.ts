@@ -46,4 +46,18 @@ describe("CLI", () => {
     expect(existsSync(filename)).toBe(true);
     cleanup(filename);
   });
+
+  it("accepts a custom file name", async () => {
+    await cli.execute(["--fileName", "customFileName.svg"]);
+
+    expect(existsSync("customFileName.svg")).toBe(true);
+    cleanup("customFileName.svg");
+  });
+
+  it("supports custom size option", async () => {
+    await cli.execute(["--size", "5"]);
+
+    expect(existsSync(filename)).toBe(true);
+    cleanup(filename);
+  });
 });

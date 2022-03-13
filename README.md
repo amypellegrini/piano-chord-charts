@@ -28,4 +28,5 @@ Once installed, running the `piano-chord-charts` command will emit an empty keyb
 | ----------------- | ---------------------------------------------------------------------------------------- | ------------------------- |
 | `--outDir`        | The file will be emitted to the specified location.                                      | `--outDir myfolder`       |
 | `--format`        | Keyboard diagram format. Values can be `exact` or `compact` (default will be `compact`). | `--format exact`          |
-| `--highlightKeys` | Highlights given keys by name, from left to right. Only white keys supported (for now).  | `--highlightKeys "C E G"` |
+| `--highlightKeys` | Highlights given keys by name, from left to right.                                       | `--highlightKeys "C E G"` |
+| `--size`          | Keyboard size (amount of white keys).                                                    | `--size 5`                |

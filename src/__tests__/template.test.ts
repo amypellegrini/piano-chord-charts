@@ -22,6 +22,11 @@ describe("renderWhiteKeys", () => {
     const result = renderWhiteKeys(120, highlightKeys);
     expect(result).toMatchSnapshot();
   });
+
+  it("supports custom size", () => {
+    const result = renderWhiteKeys(120, [], 5);
+    expect(result).toMatchSnapshot();
+  });
 });
 
 describe("renderBlackKeys", () => {
@@ -37,6 +42,11 @@ describe("renderBlackKeys", () => {
   it("highlights flat black keys from left to right", () => {
     const highlightKeys: BlackKey[] = ["Db", "Eb", "Gb"];
     const result = renderBlackKeys(80, highlightKeys);
+    expect(result).toMatchSnapshot();
+  });
+
+  it("supports custom size", () => {
+    const result = renderBlackKeys(80, [], 5);
     expect(result).toMatchSnapshot();
   });
 });
@@ -82,6 +92,14 @@ describe("render", () => {
   it("highlights a mix of different keys from left to right", () => {
     const result = render({
       highlightKeys: ["Db", "E", "G#", "B"],
+    });
+
+    expect(result).toMatchSnapshot();
+  });
+
+  it("supports a custom size", () => {
+    const result = render({
+      size: 5,
     });
 
     expect(result).toMatchSnapshot();
