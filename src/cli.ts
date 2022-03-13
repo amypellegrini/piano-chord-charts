@@ -11,6 +11,7 @@ program.option("--outDir <dir>");
 program.option("--format <format>");
 program.option("--highlightKeys <keys>");
 program.option("--fileName <fileName>");
+program.option("--size <size>");
 
 program.parse();
 
@@ -30,6 +31,7 @@ if (options && Object.keys(options).length > 0) {
   renderResult = render({
     format: options.format,
     highlightKeys: options.highlightKeys?.split(" "),
+    size: parseInt(options.size),
   });
 }
 
