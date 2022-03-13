@@ -1,4 +1,10 @@
-import template, { render, renderWhiteKeys, WhiteKey } from "../template";
+import template, {
+  render,
+  renderWhiteKeys,
+  renderBlackKeys,
+  WhiteKey,
+  BlackKey,
+} from "../template";
 
 describe("default chart template", () => {
   it("renders correctly", () => {
@@ -12,8 +18,26 @@ describe("renderWhiteKeys", () => {
   });
 
   it("highlights specific white keys from left to right", () => {
-    const highlightKeys: WhiteKey[] = ["C", "E", "G"];
-    expect(renderWhiteKeys(120, highlightKeys)).toMatchSnapshot();
+    const highlightKeys: WhiteKey[] = ["C", "E", "G", "C"];
+    const result = renderWhiteKeys(120, highlightKeys);
+    expect(result).toMatchSnapshot();
+  });
+});
+
+describe("renderBlackKeys", () => {
+  it("renders black keys default SVG content with a given height", () => {
+    expect(renderBlackKeys(80)).toMatchSnapshot();
+  });
+
+  it("highlights sharp black keys from left to right", () => {
+    const highlightKeys: BlackKey[] = ["C#", "D#", "F#"];
+    expect(renderBlackKeys(80, highlightKeys)).toMatchSnapshot();
+  });
+
+  it("highlights flat black keys from left to right", () => {
+    const highlightKeys: BlackKey[] = ["Db", "Eb", "Gb"];
+    const result = renderBlackKeys(80, highlightKeys);
+    expect(result).toMatchSnapshot();
   });
 });
 
@@ -41,7 +65,23 @@ describe("render", () => {
 
   it("highlights specific white keys from left to right", () => {
     const result = render({
-      highlightKeys: ["C", "E", "G"] as WhiteKey[],
+      highlightKeys: ["C", "E", "G"],
+    });
+
+    expect(result).toMatchSnapshot();
+  });
+
+  it("highlights specific black keys from left to right", () => {
+    const result = render({
+      highlightKeys: ["Db", "Eb", "G#"],
+    });
+
+    expect(result).toMatchSnapshot();
+  });
+
+  it("highlights a mix of different keys from left to right", () => {
+    const result = render({
+      highlightKeys: ["Db", "E", "G#", "B"],
     });
 
     expect(result).toMatchSnapshot();
