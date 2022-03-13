@@ -18,16 +18,16 @@ exports[`default chart template renders correctly 1`] = `
 <rect style=\\"fill:#fafafa;stroke:black\\" x=\\"253\\" y=\\"0\\" width=\\"23\\" height=\\"65\\" ry=\\"3\\"></rect>
 <rect style=\\"fill:#fafafa;stroke:black\\" x=\\"276\\" y=\\"0\\" width=\\"23\\" height=\\"65\\" ry=\\"3\\"></rect>
 <rect style=\\"fill:#fafafa;stroke:black\\" x=\\"299\\" y=\\"0\\" width=\\"23\\" height=\\"65\\" ry=\\"3\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"14.33333\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"41.66666\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"82.25\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"108.25\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"134.75\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"175.33333\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"202.66666\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"243.25\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"269.25\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"295.75\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"14.33333\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"41.66666\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"82.25\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"108.25\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"134.75\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"175.33333\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"202.66666\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"243.25\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"269.25\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"295.75\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
 <rect y=\\"0\\" width=\\"322\\" height=\\"3\\"></rect>
   </svg>"
 `;
@@ -51,15 +51,15 @@ exports[`render highlights a mix of different keys from left to right 1`] = `
 <rect style=\\"fill:#fafafa;stroke:black\\" x=\\"276\\" y=\\"0\\" width=\\"23\\" height=\\"65\\" ry=\\"3\\"></rect>
 <rect style=\\"fill:#fafafa;stroke:black\\" x=\\"299\\" y=\\"0\\" width=\\"23\\" height=\\"65\\" ry=\\"3\\"></rect>
 <rect style=\\"fill:#a0c6e8;stroke:black\\" x=\\"14.33333\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"41.66666\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"82.25\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"41.66666\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"82.25\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
 <rect style=\\"fill:#a0c6e8;stroke:black\\" x=\\"108.25\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"134.75\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"175.33333\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"202.66666\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"243.25\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"269.25\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"295.75\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"134.75\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"175.33333\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"202.66666\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"243.25\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"269.25\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"295.75\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
 <rect y=\\"0\\" width=\\"322\\" height=\\"3\\"></rect>
   </svg>"
 `;
@@ -84,14 +84,14 @@ exports[`render highlights specific black keys from left to right 1`] = `
 <rect style=\\"fill:#fafafa;stroke:black\\" x=\\"299\\" y=\\"0\\" width=\\"23\\" height=\\"65\\" ry=\\"3\\"></rect>
 <rect style=\\"fill:#a0c6e8;stroke:black\\" x=\\"14.33333\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
 <rect style=\\"fill:#a0c6e8;stroke:black\\" x=\\"41.66666\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"82.25\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"82.25\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
 <rect style=\\"fill:#a0c6e8;stroke:black\\" x=\\"108.25\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"134.75\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"175.33333\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"202.66666\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"243.25\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"269.25\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"295.75\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"134.75\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"175.33333\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"202.66666\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"243.25\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"269.25\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"295.75\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
 <rect y=\\"0\\" width=\\"322\\" height=\\"3\\"></rect>
   </svg>"
 `;
@@ -114,16 +114,16 @@ exports[`render highlights specific white keys from left to right 1`] = `
 <rect style=\\"fill:#fafafa;stroke:black\\" x=\\"253\\" y=\\"0\\" width=\\"23\\" height=\\"65\\" ry=\\"3\\"></rect>
 <rect style=\\"fill:#fafafa;stroke:black\\" x=\\"276\\" y=\\"0\\" width=\\"23\\" height=\\"65\\" ry=\\"3\\"></rect>
 <rect style=\\"fill:#fafafa;stroke:black\\" x=\\"299\\" y=\\"0\\" width=\\"23\\" height=\\"65\\" ry=\\"3\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"14.33333\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"41.66666\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"82.25\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"108.25\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"134.75\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"175.33333\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"202.66666\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"243.25\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"269.25\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"295.75\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"14.33333\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"41.66666\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"82.25\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"108.25\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"134.75\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"175.33333\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"202.66666\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"243.25\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"269.25\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"295.75\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
 <rect y=\\"0\\" width=\\"322\\" height=\\"3\\"></rect>
   </svg>"
 `;
@@ -146,16 +146,16 @@ exports[`render renders a default compact chart when no options are given 1`] = 
 <rect style=\\"fill:#fafafa;stroke:black\\" x=\\"253\\" y=\\"0\\" width=\\"23\\" height=\\"65\\" ry=\\"3\\"></rect>
 <rect style=\\"fill:#fafafa;stroke:black\\" x=\\"276\\" y=\\"0\\" width=\\"23\\" height=\\"65\\" ry=\\"3\\"></rect>
 <rect style=\\"fill:#fafafa;stroke:black\\" x=\\"299\\" y=\\"0\\" width=\\"23\\" height=\\"65\\" ry=\\"3\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"14.33333\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"41.66666\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"82.25\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"108.25\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"134.75\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"175.33333\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"202.66666\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"243.25\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"269.25\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"295.75\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"14.33333\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"41.66666\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"82.25\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"108.25\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"134.75\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"175.33333\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"202.66666\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"243.25\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"269.25\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"295.75\\" y=\\"0\\" width=\\"13\\" height=\\"40\\" ry=\\"1\\"></rect>
 <rect y=\\"0\\" width=\\"322\\" height=\\"3\\"></rect>
   </svg>"
 `;
@@ -178,16 +178,16 @@ exports[`render renders compact and exact versions of the keyboard 1`] = `
 <rect style=\\"fill:#fafafa;stroke:black\\" x=\\"253\\" y=\\"0\\" width=\\"23\\" height=\\"120\\" ry=\\"3\\"></rect>
 <rect style=\\"fill:#fafafa;stroke:black\\" x=\\"276\\" y=\\"0\\" width=\\"23\\" height=\\"120\\" ry=\\"3\\"></rect>
 <rect style=\\"fill:#fafafa;stroke:black\\" x=\\"299\\" y=\\"0\\" width=\\"23\\" height=\\"120\\" ry=\\"3\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"14.33333\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"41.66666\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"82.25\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"108.25\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"134.75\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"175.33333\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"202.66666\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"243.25\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"269.25\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"295.75\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"14.33333\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"41.66666\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"82.25\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"108.25\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"134.75\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"175.33333\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"202.66666\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"243.25\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"269.25\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"295.75\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
 <rect y=\\"0\\" width=\\"322\\" height=\\"3\\"></rect>
   </svg>"
 `;
@@ -196,13 +196,13 @@ exports[`renderBlackKeys highlights flat black keys from left to right 1`] = `
 "<rect style=\\"fill:#a0c6e8;stroke:black\\" x=\\"14.33333\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
 <rect style=\\"fill:#a0c6e8;stroke:black\\" x=\\"41.66666\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
 <rect style=\\"fill:#a0c6e8;stroke:black\\" x=\\"82.25\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"108.25\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"134.75\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"175.33333\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"202.66666\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"243.25\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"269.25\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"295.75\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"108.25\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"134.75\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"175.33333\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"202.66666\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"243.25\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"269.25\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"295.75\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
 "
 `;
 
@@ -210,27 +210,27 @@ exports[`renderBlackKeys highlights sharp black keys from left to right 1`] = `
 "<rect style=\\"fill:#a0c6e8;stroke:black\\" x=\\"14.33333\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
 <rect style=\\"fill:#a0c6e8;stroke:black\\" x=\\"41.66666\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
 <rect style=\\"fill:#a0c6e8;stroke:black\\" x=\\"82.25\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"108.25\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"134.75\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"175.33333\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"202.66666\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"243.25\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"269.25\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"295.75\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"108.25\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"134.75\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"175.33333\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"202.66666\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"243.25\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"269.25\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"295.75\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
 "
 `;
 
 exports[`renderBlackKeys renders black keys default SVG content with a given height 1`] = `
-"<rect style=\\"fill:black;stroke:black\\" x=\\"14.33333\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"41.66666\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"82.25\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"108.25\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"134.75\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"175.33333\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"202.66666\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"243.25\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"269.25\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
-<rect style=\\"fill:black;stroke:black\\" x=\\"295.75\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
+"<rect style=\\"fill:#222222;stroke:black\\" x=\\"14.33333\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"41.66666\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"82.25\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"108.25\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"134.75\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"175.33333\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"202.66666\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"243.25\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"269.25\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
+<rect style=\\"fill:#222222;stroke:black\\" x=\\"295.75\\" y=\\"0\\" width=\\"13\\" height=\\"80\\" ry=\\"1\\"></rect>
 "
 `;
 
