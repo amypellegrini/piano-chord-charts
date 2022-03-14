@@ -1,4 +1,4 @@
-type KeyboardChartFormat = "compact" | "exact";
+import { KeyboardChartLayout } from "./types";
 
 export type WhiteKey = "C" | "D" | "E" | "F" | "G" | "A" | "B";
 export type BlackKey =
@@ -14,7 +14,7 @@ export type BlackKey =
   | "Bb";
 
 type RenderOptions = {
-  format?: KeyboardChartFormat;
+  format?: KeyboardChartLayout;
   highlightKeys?: Array<WhiteKey | BlackKey>;
   size?: number;
   startFrom?: WhiteKey;
@@ -138,7 +138,7 @@ function render(options?: RenderOptions) {
   let height = 65;
   let blackKeyHeight = 40;
 
-  const format: KeyboardChartFormat = options?.format || "compact";
+  const format: KeyboardChartLayout = options?.format || "compact";
   const size: number = options?.size || 14;
   const width: number = size * whiteKeyWidth;
 
