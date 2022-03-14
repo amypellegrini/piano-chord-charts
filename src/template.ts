@@ -17,6 +17,7 @@ type RenderOptions = {
   format?: KeyboardChartFormat;
   highlightKeys?: Array<WhiteKey | BlackKey>;
   size?: number;
+  startFrom?: WhiteKey;
 };
 
 type OffsetKey = "C" | "D" | "F" | "G" | "A";
@@ -31,16 +32,23 @@ const whiteKeyWidth = 23;
 function renderWhiteKeys(
   height: number,
   highlightKeys?: WhiteKey[],
-  size?: number
+  size?: number,
+  startFrom?: WhiteKey
 ) {
   const amount = size || 14;
+  const startNote = startFrom || "C";
+  const startOffset = keyNames.indexOf(startNote);
 
   let keyX = 0;
   let result = "";
   let highlightIdx = 0;
 
   for (let count = 0; count < amount; count++) {
-    const keyName = keyNames[count] || keyNames[count - 7];
+    const keyNameIdx = count + startOffset;
+    const keyName =
+      keyNames[keyNameIdx] ||
+      keyNames[keyNameIdx - 7] ||
+      keyNames[keyNameIdx - 14];
 
     let colour = "#fafafa";
 
@@ -67,9 +75,12 @@ function renderWhiteKeys(
 function renderBlackKeys(
   height: number,
   highlightKeys?: BlackKey[],
-  size?: number
+  size?: number,
+  startFrom?: WhiteKey
 ) {
   const whiteKeysAmount = size || 14;
+  const startNote = startFrom || "C";
+  const startOffset = keyNames.indexOf(startNote);
 
   const offsetFromWhiteKeyMap: OffsetKeyMap = {
     C: 14.33333,
@@ -91,7 +102,11 @@ function renderBlackKeys(
   let highlightIdx = 0;
 
   for (let count = 0; count < whiteKeysAmount; count++) {
-    const keyName = keyNames[count] || keyNames[count - 7];
+    const keyNameIdx = count + startOffset;
+    const keyName =
+      keyNames[keyNameIdx] ||
+      keyNames[keyNameIdx - 7] ||
+      keyNames[keyNameIdx - 14];
     const blackKeyName = keyName + "#";
 
     let colour = "#222222";
@@ -143,11 +158,13 @@ function render(options?: RenderOptions) {
   const defaultContent = `${renderWhiteKeys(
     height,
     highlightWhiteKeys as WhiteKey[],
-    size
+    size,
+    options?.startFrom
   )}${renderBlackKeys(
     blackKeyHeight,
     highlightBlackKeys as BlackKey[],
-    size
+    size,
+    options?.startFrom
   )}<rect y="-1" width="${width}" height="3"></rect>`;
 
   const template = `<?xml version="1.0" standalone="no"?>

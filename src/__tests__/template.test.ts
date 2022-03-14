@@ -27,6 +27,11 @@ describe("renderWhiteKeys", () => {
     const result = renderWhiteKeys(120, [], 5);
     expect(result).toMatchSnapshot();
   });
+
+  it("starts from a given white key", () => {
+    const result = renderWhiteKeys(120, ["G", "G", "C"], 15, "F");
+    expect(result).toMatchSnapshot();
+  });
 });
 
 describe("renderBlackKeys", () => {
@@ -47,6 +52,11 @@ describe("renderBlackKeys", () => {
 
   it("supports custom size", () => {
     const result = renderBlackKeys(80, [], 5);
+    expect(result).toMatchSnapshot();
+  });
+
+  it("starts from a given white key", () => {
+    const result = renderBlackKeys(80, ["F#", "F#", "C#"], 15, "F");
     expect(result).toMatchSnapshot();
   });
 });
@@ -100,6 +110,14 @@ describe("render", () => {
   it("supports a custom size", () => {
     const result = render({
       size: 5,
+    });
+
+    expect(result).toMatchSnapshot();
+  });
+
+  it("starts from a given white key", () => {
+    const result = render({
+      startFrom: "F",
     });
 
     expect(result).toMatchSnapshot();
