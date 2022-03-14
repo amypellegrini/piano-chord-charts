@@ -17,4 +17,15 @@ describe("renderKeys", () => {
     );
     expect(result).toMatchSnapshot();
   });
+
+  it("highlights sharp black keys from left to right", () => {
+    const highlightKeys: BlackKey[] = ["C#", "D#", "F#"];
+    expect(renderKeys("compact", highlightKeys)).toMatchSnapshot();
+  });
+
+  it("highlights flat black keys from left to right", () => {
+    const highlightKeys: BlackKey[] = ["Db", "Eb", "Gb"];
+    const result = renderKeys("compact", highlightKeys);
+    expect(result).toMatchSnapshot();
+  });
 });

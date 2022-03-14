@@ -17,6 +17,14 @@ const offsetFromWhiteKeyMap: OffsetKeyMap = {
   A: 19.75,
 };
 
+const flatToSharpMap: { [key: string]: string } = {
+  Db: "C#",
+  Eb: "D#",
+  Gb: "F#",
+  Ab: "G#",
+  Bb: "A#",
+};
+
 const layoutSettingsMap = {
   exact: {
     whiteKeyHeight: 120,
@@ -65,10 +73,25 @@ function renderKeys(
     );
 
     if (offsetFromWhiteKeyMap[keyName as OffsetKey]) {
+      const blackKeyName = keyName + "#";
       const offset = offsetFromWhiteKeyMap[keyName as OffsetKey];
       const blackKeyX = count * whiteKeyWidth + offset;
 
+      let highlightKeyName: WhiteKey | BlackKey =
+        (highlightKeys && highlightKeys[highlightIdx]) || "";
+
       let blackKeycolour = "#222222";
+
+      if (highlightKeyName.match(/b/)) {
+        highlightKeyName = flatToSharpMap[highlightKeyName] as
+          | WhiteKey
+          | BlackKey;
+      }
+
+      if (highlightKeys && blackKeyName === highlightKeyName) {
+        blackKeycolour = highlightColour;
+        highlightIdx++;
+      }
 
       blackKeys = blackKeys.concat(
         `<rect style="fill:${blackKeycolour};stroke:black" x="${blackKeyX}" y="0" width="13" height="${blackKeyHeight}" ry="1"></rect>\n`
