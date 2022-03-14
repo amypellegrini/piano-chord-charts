@@ -1,5 +1,5 @@
 import renderKeys from "../renderKeys";
-import { KeyboardChartLayout } from "../types";
+import { BlackKey, KeyboardChartLayout, WhiteKey } from "../types";
 
 describe("renderKeys", () => {
   it.each(["compact", "exact"])(
