@@ -1,3 +1,4 @@
+import renderKeys from "./renderKeys";
 import { BlackKey, KeyboardChartLayout, WhiteKey } from "./types";
 
 type RenderOptions = {
@@ -7,123 +8,10 @@ type RenderOptions = {
   startFrom?: WhiteKey;
 };
 
-type OffsetKey = "C" | "D" | "F" | "G" | "A";
-
-type OffsetKeyMap = {
-  [key in OffsetKey]: number;
-};
-
-const keyNames = ["C", "D", "E", "F", "G", "A", "B"];
 const whiteKeyWidth = 23;
-
-function renderWhiteKeys(
-  height: number,
-  highlightKeys?: WhiteKey[],
-  size?: number,
-  startFrom?: WhiteKey
-) {
-  const amount = size || 14;
-  const startNote = startFrom || "C";
-  const startOffset = keyNames.indexOf(startNote);
-
-  let keyX = 0;
-  let result = "";
-  let highlightIdx = 0;
-
-  for (let count = 0; count < amount; count++) {
-    const keyNameIdx = count + startOffset;
-    const keyName =
-      keyNames[keyNameIdx] ||
-      keyNames[keyNameIdx - 7] ||
-      keyNames[keyNameIdx - 14];
-
-    let colour = "#fafafa";
-
-    if (highlightKeys) {
-      if (
-        highlightIdx < highlightKeys.length &&
-        highlightKeys[highlightIdx] === keyName
-      ) {
-        colour = "#a0c6e8";
-        highlightIdx += 1;
-      }
-    }
-
-    keyX = count * whiteKeyWidth;
-
-    result = result.concat(
-      `<rect style="fill:${colour};stroke:black" x="${keyX}" y="0" width="23" height="${height}" ry="3"></rect>\n`
-    );
-  }
-
-  return result;
-}
-
-function renderBlackKeys(
-  height: number,
-  highlightKeys?: BlackKey[],
-  size?: number,
-  startFrom?: WhiteKey
-) {
-  const whiteKeysAmount = size || 14;
-  const startNote = startFrom || "C";
-  const startOffset = keyNames.indexOf(startNote);
-
-  const offsetFromWhiteKeyMap: OffsetKeyMap = {
-    C: 14.33333,
-    D: 18.66666,
-    F: 13.25,
-    G: 16.25,
-    A: 19.75,
-  };
-
-  const flatToSharpMap: { [key: string]: string } = {
-    Db: "C#",
-    Eb: "D#",
-    Gb: "F#",
-    Ab: "G#",
-    Bb: "A#",
-  };
-
-  let result = "";
-  let highlightIdx = 0;
-
-  for (let count = 0; count < whiteKeysAmount; count++) {
-    const keyNameIdx = count + startOffset;
-    const keyName =
-      keyNames[keyNameIdx] ||
-      keyNames[keyNameIdx - 7] ||
-      keyNames[keyNameIdx - 14];
-    const blackKeyName = keyName + "#";
-
-    let colour = "#222222";
-    let highlightKeyName = (highlightKeys && highlightKeys[highlightIdx]) || "";
-
-    if (highlightKeyName.match(/b/)) {
-      highlightKeyName = flatToSharpMap[highlightKeyName];
-    }
-
-    if (keyName in offsetFromWhiteKeyMap) {
-      if (highlightKeys && blackKeyName === highlightKeyName) {
-        colour = "#a0c6e8";
-        highlightIdx++;
-      }
-
-      const offset = offsetFromWhiteKeyMap[keyName as OffsetKey];
-      const keyX = count * whiteKeyWidth + offset;
-
-      result = result.concat(
-        `<rect style="fill:${colour};stroke:black" x="${keyX}" y="0" width="13" height="${height}" ry="1"></rect>\n`
-      );
-    }
-  }
-
-  return result;
-}
 
 function render(options?: RenderOptions) {
   let height = 65;
-  let blackKeyHeight = 40;
 
   const format: KeyboardChartLayout = options?.format || "compact";
   const size: number = options?.size || 14;
@@ -131,27 +19,13 @@ function render(options?: RenderOptions) {
 
   if (format === "exact") {
     height = 120;
-    blackKeyHeight = 80;
   }
 
-  const highlightWhiteKeys = options?.highlightKeys?.filter((key) => {
-    return !!key.match(/(A|B|C|D|E|F|G)$/);
-  });
-
-  const highlightBlackKeys = options?.highlightKeys?.filter((key) => {
-    return !!key.match(/(A#|C#|D#|F#|G#|Db|Eb|Gb|Ab|Bb)$/);
-  });
-
-  const defaultContent = `${renderWhiteKeys(
-    height,
-    highlightWhiteKeys as WhiteKey[],
+  const defaultContent = `${renderKeys(
+    format,
+    options?.highlightKeys || [],
     size,
-    options?.startFrom
-  )}${renderBlackKeys(
-    blackKeyHeight,
-    highlightBlackKeys as BlackKey[],
-    size,
-    options?.startFrom
+    options?.startFrom || "C"
   )}<rect y="-1" width="${width}" height="3"></rect>`;
 
   const template = `<?xml version="1.0" standalone="no"?>
@@ -167,5 +41,5 @@ function render(options?: RenderOptions) {
 
 const template = render();
 
-export { render, renderWhiteKeys, renderBlackKeys };
+export { render };
 export default template;

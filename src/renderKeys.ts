@@ -39,10 +39,12 @@ const layoutSettingsMap = {
 function renderKeys(
   layout: KeyboardChartLayout,
   highlightKeys: Array<WhiteKey | BlackKey>,
-  size: number
+  size: number,
+  startFrom: WhiteKey
 ) {
   const whiteKeyHeight = layoutSettingsMap[layout].whiteKeyHeight;
   const blackKeyHeight = layoutSettingsMap[layout].blackKeyHeight;
+  const startOffset = keyNames.indexOf(startFrom);
 
   const highlightColour = "#a0c6e8";
 
@@ -51,7 +53,8 @@ function renderKeys(
   let highlightIdx = 0;
 
   for (let count = 0; count < size; count++) {
-    const keyNameIdx = count < 7 ? count : count % 7;
+    const startIdx = count + startOffset;
+    const keyNameIdx = startIdx < 7 ? startIdx : startIdx % 7;
     const keyName = keyNames[keyNameIdx];
     const whiteKeyX = count * whiteKeyWidth;
 

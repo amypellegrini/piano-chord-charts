@@ -6,7 +6,7 @@ describe("renderKeys", () => {
     "renders keys with the correct layout format",
     (layout) => {
       expect(
-        renderKeys(layout as KeyboardChartLayout, [], 14)
+        renderKeys(layout as KeyboardChartLayout, [], 14, "C")
       ).toMatchSnapshot();
     }
   );
@@ -16,24 +16,30 @@ describe("renderKeys", () => {
     const result = renderKeys(
       "compact",
       highlightKeys as Array<WhiteKey | BlackKey>,
-      14
+      14,
+      "C"
     );
     expect(result).toMatchSnapshot();
   });
 
   it("highlights sharp black keys from left to right", () => {
     const highlightKeys: BlackKey[] = ["C#", "D#", "F#"];
-    expect(renderKeys("compact", highlightKeys, 14)).toMatchSnapshot();
+    expect(renderKeys("compact", highlightKeys, 14, "C")).toMatchSnapshot();
   });
 
   it("highlights flat black keys from left to right", () => {
     const highlightKeys: BlackKey[] = ["Db", "Eb", "Gb"];
-    const result = renderKeys("compact", highlightKeys, 14);
+    const result = renderKeys("compact", highlightKeys, 14, "C");
     expect(result).toMatchSnapshot();
   });
 
   it("supports custom size", () => {
-    const result = renderKeys("compact", [], 5);
+    const result = renderKeys("compact", [], 5, "C");
+    expect(result).toMatchSnapshot();
+  });
+
+  it("starts from a given white key", () => {
+    const result = renderKeys("compact", ["F#", "F#", "C#"], 15, "F");
     expect(result).toMatchSnapshot();
   });
 });
