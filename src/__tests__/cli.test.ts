@@ -60,4 +60,11 @@ describe("CLI", () => {
     expect(existsSync(filename)).toBe(true);
     cleanup(filename);
   });
+
+  it("renders keyboard starting from a given white key", async () => {
+    await cli.execute(["--startFrom", "F"]);
+
+    expect(existsSync(filename)).toBe(true);
+    cleanup(filename);
+  });
 });
