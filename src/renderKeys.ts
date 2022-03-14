@@ -38,10 +38,9 @@ const layoutSettingsMap = {
 
 function renderKeys(
   layout: KeyboardChartLayout,
-  highlightKeys: Array<WhiteKey | BlackKey>
+  highlightKeys: Array<WhiteKey | BlackKey>,
+  size: number
 ) {
-  const size = 14;
-
   const whiteKeyHeight = layoutSettingsMap[layout].whiteKeyHeight;
   const blackKeyHeight = layoutSettingsMap[layout].blackKeyHeight;
 
