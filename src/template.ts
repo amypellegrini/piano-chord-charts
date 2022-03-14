@@ -1,17 +1,4 @@
-import { KeyboardChartLayout } from "./types";
-
-export type WhiteKey = "C" | "D" | "E" | "F" | "G" | "A" | "B";
-export type BlackKey =
-  | "C#"
-  | "D#"
-  | "F#"
-  | "G#"
-  | "A#"
-  | "Db"
-  | "Eb"
-  | "Gb"
-  | "Ab"
-  | "Bb";
+import { BlackKey, KeyboardChartLayout, WhiteKey } from "./types";
 
 type RenderOptions = {
   format?: KeyboardChartLayout;

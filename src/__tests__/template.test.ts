@@ -2,9 +2,8 @@ import template, {
   render,
   renderWhiteKeys,
   renderBlackKeys,
-  WhiteKey,
-  BlackKey,
 } from "../template";
+import { WhiteKey, BlackKey } from "../types";
 
 describe("default chart template", () => {
   it("renders correctly", () => {
