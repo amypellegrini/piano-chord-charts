@@ -30,3 +30,4 @@ Once installed, running the `piano-chord-charts` command will emit an empty keyb
 | `--format`        | Keyboard diagram format. Values can be `exact` or `compact` (default will be `compact`). | `--format exact`          |
 | `--highlightKeys` | Highlights given keys by name, from left to right.                                       | `--highlightKeys "C E G"` |
 | `--size`          | Keyboard size (amount of white keys).                                                    | `--size 5`                |
+| `--startFrom`     | Renders keyboard chart starting from a given white key.                                  | `--startFrom G`           |
