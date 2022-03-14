@@ -1,4 +1,4 @@
-import { KeyboardChartLayout } from "./types";
+import { KeyboardChartLayout, BlackKey, WhiteKey } from "./types";
 
 type OffsetKey = "C" | "D" | "F" | "G" | "A";
 
@@ -28,22 +28,37 @@ const layoutSettingsMap = {
   },
 };
 
-function renderKeys(layout: KeyboardChartLayout) {
+function renderKeys(
+  layout: KeyboardChartLayout,
+  highlightKeys: Array<WhiteKey | BlackKey>
+) {
   const size = 14;
 
   const whiteKeyHeight = layoutSettingsMap[layout].whiteKeyHeight;
   const blackKeyHeight = layoutSettingsMap[layout].blackKeyHeight;
 
-  const whiteKeyColour = "#fafafa";
-  const blackKeycolour = "#222222";
+  const highlightColour = "#a0c6e8";
 
   let whiteKeys = "";
   let blackKeys = "";
+  let highlightIdx = 0;
 
   for (let count = 0; count < size; count++) {
     const keyNameIdx = count < 7 ? count : count % 7;
     const keyName = keyNames[keyNameIdx];
     const whiteKeyX = count * whiteKeyWidth;
+
+    let whiteKeyColour = "#fafafa";
+
+    if (highlightKeys) {
+      if (
+        highlightIdx < highlightKeys.length &&
+        highlightKeys[highlightIdx] === keyName
+      ) {
+        whiteKeyColour = highlightColour;
+        highlightIdx += 1;
+      }
+    }
 
     whiteKeys = whiteKeys.concat(
       `<rect style="fill:${whiteKeyColour};stroke:black" x="${whiteKeyX}" y="0" width="23" height="${whiteKeyHeight}" ry="3"></rect>\n`
@@ -52,6 +67,8 @@ function renderKeys(layout: KeyboardChartLayout) {
     if (offsetFromWhiteKeyMap[keyName as OffsetKey]) {
       const offset = offsetFromWhiteKeyMap[keyName as OffsetKey];
       const blackKeyX = count * whiteKeyWidth + offset;
+
+      let blackKeycolour = "#222222";
 
       blackKeys = blackKeys.concat(
         `<rect style="fill:${blackKeycolour};stroke:black" x="${blackKeyX}" y="0" width="13" height="${blackKeyHeight}" ry="1"></rect>\n`
