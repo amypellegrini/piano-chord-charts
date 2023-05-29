@@ -2,17 +2,7 @@
 
 Piano/keyboard chord charts SVG library and generator tool.
 
-Proposed API example (coming soon):
-
-```shell
-piano-chord-charts --notes C1 E1 G1 Bb1
-piano-chord-charts -n C#1 E1 G#1 B1
-
-piano-chord-charts --chord Cmaj7 --voicing drop-2
-piano-chord-charts -c Cmaj7 -v drop-2
-```
-
-## Problem statement
+## Context
 
 Creating piano/keyboard chart diagrams for educational purposes can be time consuming, particularly when accounting for all musical keys in combination with different voicing patterns. When done manually it can be repetitive and prone to errors.
 
@@ -31,3 +21,9 @@ Once installed, running the `piano-chord-charts` command will emit an empty keyb
 | `--highlightKeys` | Highlights given keys by name, from left to right.                                       | `--highlightKeys "C E G"` |
 | `--size`          | Keyboard size (amount of white keys).                                                    | `--size 5`                |
 | `--startFrom`     | Renders keyboard chart starting from a given white key.                                  | `--startFrom G`           |
+
+## Running tests
+
+```shell
+npm test
+```
