@@ -52,6 +52,20 @@ function renderKeys(
   let blackKeys = "";
   let highlightIdx = 0;
 
+  // The black key left of the first white key overhangs the left edge, so it shows partially,
+  // as the black key right of the last white key does on the right edge. It sits outside the
+  // chart, so it is never highlighted.
+  const keyBeforeStart = keyNames[(startOffset + 6) % 7];
+  const edgeOffset = offsetFromWhiteKeyMap[keyBeforeStart as OffsetKey];
+
+  if (edgeOffset) {
+    blackKeys = blackKeys.concat(
+      `<rect style="fill:#222222;stroke:black" x="${
+        edgeOffset - whiteKeyWidth
+      }" y="0" width="13" height="${blackKeyHeight}" ry="1"></rect>\n`
+    );
+  }
+
   for (let count = 0; count < size; count++) {
     const startIdx = count + startOffset;
     const keyNameIdx = startIdx < 7 ? startIdx : startIdx % 7;
