@@ -3,19 +3,30 @@ on:
   push:
     branches:
       - main
+
+# Publishes to npm with trusted publishing (OIDC): no long-lived npm token. npm trusts this
+# workflow (release.yml in amypellegrini/piano-chord-charts) as configured in the package's
+# settings on npmjs.com, and attaches provenance to each release.
+# GitHub releases and the version commit use the workflow's own GITHUB_TOKEN.
+permissions:
+  contents: write # push the release commit and tag, create the GitHub release
+  issues: write # comment on released issues
+  pull-requests: write # comment on released pull requests
+  id-token: write # OIDC for npm trusted publishing and provenance
+
 jobs:
   release:
     name: Release
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - name: Setup Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
-          node-version: "lts/*"
+          node-version: "24"
       - name: Install dependencies
         run: npm ci
       - name: Build
@@ -24,6 +35,5 @@ jobs:
         run: npm run test
       - name: Release
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npx semantic-release
