@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Versioned commit-msg hook (enable with: git config core.hooksPath .githooks).
+# Runs the registry guard, then any hook installed in .git/hooks
+# (for example from init.templateDir) so those checks keep running.
+set -e
+root=$(git rev-parse --show-toplevel)
+bash "$root/scripts/check-registry.sh" --message "$1"
+chained="$(git rev-parse --git-common-dir)/hooks/commit-msg"
+if [ -x "$chained" ]; then "$chained" "$@"; fi

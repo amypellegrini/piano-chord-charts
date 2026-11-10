@@ -1,0 +1,17 @@
+name: Registry guard
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  registry-guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Lockfiles and .npmrc only use the public npm registry
+        run: bash scripts/check-registry.sh
