@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Versioned pre-commit hook (enable with: git config core.hooksPath .githooks).
+# Runs the registry guard, then any hook installed in .git/hooks
+# (for example from init.templateDir) so those checks keep running.
+set -e
+root=$(git rev-parse --show-toplevel)
+bash "$root/scripts/check-registry.sh" --staged
+chained="$(git rev-parse --git-common-dir)/hooks/pre-commit"
+if [ -x "$chained" ]; then "$chained" "$@"; fi
